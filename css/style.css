@@ -1087,6 +1087,10 @@ scrollbar-width: none;  /* Firefox */
         visibility: visible;
         opacity: 1;
     }
+    .opacity0{
+        visibility: hidden;
+        opacity: 0;
+    }
     .header__nav{
         position: fixed;
         top: 0;
@@ -1136,8 +1140,8 @@ scrollbar-width: none;  /* Firefox */
     }
     .closeNavIcon{
         position: absolute;
-        right: -80%;
-        top: -20%;
+        right: 27px;
+        top: 30px;
         font-size: 1.2rem;
         color: var(--black-txt);
         cursor: pointer;
@@ -1192,8 +1196,8 @@ scrollbar-width: none;  /* Firefox */
     }
     /* header */
     .closeNavIcon{
-        right: -40%;
-        top: -25%;
+        /* right: -40%;
+        top: -25%; */
     }
     /* showcase */
     .slidees{
@@ -1236,3 +1240,8 @@ scrollbar-width: none;  /* Firefox */
     }
     
 }
+
+.translateX{
+    transform: translateX(100%) !important;
+}
+

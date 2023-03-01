@@ -38,10 +38,10 @@
                     </div>
                     <nav id="headerNav"
                         class="header__nav flex-column align-items-center justify-content-center">
+                        <span class="closeNavIcon d-md-none d-block" onclick="headerNavFunc()">
+                            <i class="fas fa-times"></i>
+                        </span>
                         <ul class="header__list d-flex align-items-center list-none flex-md-row flex-column">
-                            <span class="closeNavIcon d-md-none d-block" onclick="headerNavFunc()">
-                                <i class="fas fa-times"></i>
-                            </span>
                             <li class="header__item">
                                 <a href="#service" class="nav-link header__link ">Services</a>
                             </li>
@@ -879,7 +879,7 @@
         $('#headerNav a').on('click', function(e){
             if(this.hash !== ''){
                 e.preventDefault();
-
+                $(".header__nav__main").removeClass("active")
                 const hash = this.hash;
 
                 $('html, body').animate({

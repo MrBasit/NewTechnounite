@@ -15,13 +15,34 @@ try {
     console.log(err);
 }
 // Mobile Header
+
 try {
     function headerNavFunc(){
         const menuMain = document.querySelector('.header__nav__main');
+        console.log(menuMain)
         menuMain.classList.toggle('active');
+
     }
 } catch (err) {
     console.log(err);
+}
+
+const menu = document.querySelectorAll('.header__list');
+console.log(menu)
+try {
+    console.log(menu)
+    menu.forEach(list => {
+        console.log(list)
+        list.addEventListener('click', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            console.log(list)
+            document.querySelector('.header__nav__main').classList.remove('active');
+        })
+    })
+    
+} catch (error) {
+    console.log(error)
 }
 // product Func
 try {
